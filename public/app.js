@@ -16,7 +16,8 @@ const daysDescription = document.querySelectorAll(".days-description");
 const daysContainer = document.querySelectorAll(".daysContainer");
 const daysTime = document.querySelectorAll(".days-time");
 const weatherDiv = document.querySelector(".weather-div");
-const loader = document.querySelector(".loader")
+const loader = document.querySelector(".loader");
+const alertbox = document.querySelector(".alertbox")
 
 for (let i = 0; i < daysContainer.length; i++) {
   daysContainer[i].addEventListener("mouseover", () => {
@@ -36,6 +37,7 @@ searchButton.addEventListener("click", (e) => {
     alert("type in a location");
     return ;
   } else {
+    alertbox.style.display = "none"
     loader.style.display = "block"
     let latitude;
     let longitude;
@@ -53,8 +55,19 @@ searchButton.addEventListener("click", (e) => {
         country: data[0].country,
       };
       searcH(latitude, longitude, locObject);
-    });
+    }).catch((err) => {
+      loader.style.display = "none"
+      alertbox.style.display = "block"
+      weatherDiv.style.display = "";
+      currentLocation.innerHTML = "";
+      currentTemperature.innerHTML = "";
+      weatherReport.innerHTML = "";
+      date.innerHTML ="";
+      image.src = ";"
+      image.alt = "";
+      let arr = "";
 
+    });
   searchLocation.value = "";
   }
 });

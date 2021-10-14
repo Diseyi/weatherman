@@ -5,7 +5,7 @@
   }
   
   body {
-    background-image: url("image1.jpg");
+    background-image: url("./assets/bg.jpg");
     background-repeat: no-repeat;
     height: 100%;
     color: #3b0e3b;
@@ -58,7 +58,7 @@
     display: none;
     width: 80px;
     height: 80px;
-    margin: 100px auto;
+    margin: 50px auto;
     border: 5px solid;
     border-radius: 40px;
     border-top: none;
@@ -74,6 +74,16 @@
     100% {
       transform: rotate(360deg);
     }
+  }
+
+  .alertbox {
+    background-color: #3b0e3b;
+   color: #ffffff;
+   width: 300px;
+   font-size: 20px;
+   margin: auto;
+   padding: 50px;
+   display: none;
   }
   
   .weather-div {
@@ -120,6 +130,9 @@
   }
   
   .divFooter {
+    position: absolute;
+      bottom: 0;
+      width: 100%;
     display: grid;
     grid-template-columns: 30% 30% 30% 30% 30% 30% 30% 30%;
   }
@@ -138,7 +151,7 @@
   .nextDate,
   .days-time {
     font-weight: 700;
-    color: #130213;
+    color: #ffffff;
     padding: 5px;
   }
   
@@ -150,22 +163,11 @@
   .days-time {
     font-size: 12px;
   }
-  
-  /* @media (orientation: Potrait) { */
-    footer {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      overflow-x: scroll;
-    }
-  /* } */
 
-  @media (orientation: Landscape) {
-    footer {
-      position: static;
-      width: 100%;
-    }
+  .divFooter {
+    overflow-x: auto;
   }
+
   @media only screen and (max-width: 474px) {
     .divFooter {
       display: grid;
@@ -177,6 +179,7 @@
     .divFooter {
       display: grid;
       grid-template-columns: 45% 45% 45% 45% 45% 45% 45% 405%;
+      
     }
   }
   
@@ -196,7 +199,8 @@
   
   @media only screen and (min-width: 768px) {
     body {
-      background-image: url("image1.jpg");
+      background-image: url("./assets/bg.jpg");
+      overflow: hidden;
     }
   
     .flexHeader {
@@ -210,6 +214,9 @@
     }
   
     .divFooter {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
       display: grid;
       grid-template-columns: 25% 25% 25% 25% 25% 25% 20%5 25%;
       justify-content: space-around;
@@ -232,6 +239,10 @@
     }
   
     .divFooter {
+
+      position: absolute;
+      bottom: 0;
+      width: 100%;
       display: grid;
       grid-template-columns: 12% 12% 12% 12% 12% 12% 12% 12%;
       justify-content: space-around;

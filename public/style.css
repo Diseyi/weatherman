@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,11 +7,11 @@
 }
 
 body {
-  background-image: url("image1.jpg");
+  background-color: #b9dfe8;
+  background-image: url(weather.png);
   background-repeat: no-repeat;
-  height: 100%;
-  color: #3b0e3b;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
 }
 
 header {
@@ -18,7 +20,9 @@ header {
 
 .logo {
   text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #b9dfe8;
+  text-shadow: 2px 2px 2px #293B5F;
+  font-size: 3.5em;
 }
 
 .flexHeader {
@@ -29,29 +33,35 @@ header {
   padding: 10px;
   width: 70%;
   margin: auto;
+  font-size: 20px;
 }
 
 #searchLocation {
   width: 100%;
-  padding: 5px;
+  padding: 10px;
   outline: none;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 #searchButton {
-  background-color: #3b0e3b;
+  background-color: #293B5F;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   color: #fff;
   border: none;
   outline: none;
-  padding: 5px;
+  padding: 10px;
   font-weight: bold;
 }
 
 #searchButton:hover {
-  color: pink;
+  color: #DBE6FD;
 }
 
 .main {
-  margin: 15px 20px;
+  margin: 8px 20px;
 }
 
 .loader {
@@ -119,20 +129,12 @@ header {
   font-weight: 600;
 }
 
-/* footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  overflow-x: scroll;
-} */
-
 .divFooter {
-  display: grid;
-  grid-template-columns: 30% 30% 30% 30% 30% 30% 30% 30%;
+  display: flex;
 }
 
 .daysContainer {
-  /* display: none; */
+  display: none;
   margin: 10px 5px 20px;
   padding: 30px 20px;
   text-align: center;
@@ -163,7 +165,6 @@ header {
     position: absolute;
     bottom: 0;
     width: 100%;
-    overflow-x: scroll;
   }
 /* } */
 
@@ -196,9 +197,6 @@ header {
 }
 
 @media only screen and (min-width: 768px) {
-  body {
-    background-image: url("image1.jpg");
-  }
 
   .flexHeader {
     display: flex;
@@ -236,12 +234,5 @@ header {
     display: grid;
     grid-template-columns: 12% 12% 12% 12% 12% 12% 12% 12%;
     justify-content: space-around;
-  }
-}
-
-@media (orientation: landscape) {
-  footer {
-    position: static;
-    width: 100%;
   }
 }

@@ -40,7 +40,7 @@ searchButton.addEventListener("click", (e) => {
     let latitude;
     let longitude;
   const input = searchLocation.value;
-  const apiKey = "apikey";
+  const apiKey = "e15328c91f796bf73b5882ed29720192";
   const geocodeApi = `https://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=1&appid=${apiKey}`;
 
   fetch(geocodeApi)
@@ -60,7 +60,7 @@ searchButton.addEventListener("click", (e) => {
 });
 
 function searcH(lat, lon, loc) {
-  const apiKey = "apikey";
+  const apiKey = "e15328c91f796bf73b5882ed29720192";
   const oncallApi = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   fetch(oncallApi)
     .then((res) => res.json())

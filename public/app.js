@@ -31,7 +31,10 @@ for (let i = 0; i < daysContainer.length; i++) {
   });
 }
 
-searchButton.addEventListener("click", (e) => {
+form.addEventListener("submit", weatherSearch);
+searchButton.addEventListener("click", weatherSearch);
+
+function weatherSearch(e) {
   e.preventDefault();
   if (searchLocation.value == "") {
     return;
@@ -68,7 +71,7 @@ searchButton.addEventListener("click", (e) => {
       });
     searchLocation.value = "";
   }
-});
+}
 
 function searcH(lat, lon, loc) {
   const apiKey = "e15328c91f796bf73b5882ed29720192";
